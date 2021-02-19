@@ -4,25 +4,25 @@ import { NavLink } from "react-router-dom";
 import { Component } from "react";
 
 class Header extends Component {
-    state = {
-        isHover:false,
-        hoverDropDown:{
-            classes: "dropdown-menu animated fadeOutUp",
-            display: "none"
-        }
+  state = {
+    isHover: false,
+    hoverDropDown: {
+      classes: "dropdown-menu animated fadeOutUp",
+      display: "none"
     }
-    onHoverHandler = () =>{
-        const updatedHoverDropDown = {
-            ...this.state.hoverDropDown
-        }
-        const updatedHover = !this.state.isHover
-        updatedHoverDropDown.classes = updatedHover ? "dropdown-menu animated fadeInDown" : "dropdown-menu animated fadeOutUp"
-        updatedHoverDropDown.display = updatedHover ? "block" : "none"
-        this.setState({
-            isHover: updatedHover,
-            hoverDropDown: updatedHoverDropDown
-        })
+  }
+  onHoverHandler = () => {
+    const updatedHoverDropDown = {
+      ...this.state.hoverDropDown
     }
+    const updatedHover = !this.state.isHover
+    updatedHoverDropDown.classes = updatedHover ? "dropdown-menu animated fadeInDown" : "dropdown-menu animated fadeOutUp"
+    updatedHoverDropDown.display = updatedHover ? "block" : "none"
+    this.setState({
+      isHover: updatedHover,
+      hoverDropDown: updatedHoverDropDown
+    })
+  }
   render() {
     return (
       <div>
@@ -78,35 +78,22 @@ class Header extends Component {
                       }}
                     >
                       <li>
-                        <NavLink className="dropdown-nav-link" to="/shop">
-                          Sidebar Shop
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          className="dropdown-nav-link"
-                          to="/shop-detail"
-                        >
-                          Shop Detail
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink className="dropdown-nav-link" to="/cart">
+                        <NavLink className="dropdown-nav-link" to="/shop/cart">
                           Cart
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-nav-link" to="/checkout">
+                        <NavLink className="dropdown-nav-link" to="/shop/checkout">
                           Checkout
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-nav-link" to="/my-account">
+                        <NavLink className="dropdown-nav-link" to="/shop/my-account">
                           My Account
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-nav-link" to="/wishlist">
+                        <NavLink className="dropdown-nav-link" to="/shop/wishlist">
                           Wishlist
                         </NavLink>
                       </li>
