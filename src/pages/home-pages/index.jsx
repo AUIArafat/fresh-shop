@@ -1,6 +1,7 @@
 import BoxAddProducts from '../../components/box-add-products'
 import Categories from '../../components/categories'
-import InstagramBox from '../../components/instagram-box'
+import LatestBlog from '../../components/latest-blogs'
+import Products from '../../components/products'
 
 function HomePages(){
     return (
@@ -8,7 +9,8 @@ function HomePages(){
         <div>
             <Categories/>
             <BoxAddProducts/>
-            <InstagramBox/>
+            <Products/>
+            <LatestBlog/>
         </div>
     )
 }

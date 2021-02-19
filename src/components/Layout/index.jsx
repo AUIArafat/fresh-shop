@@ -11,6 +11,7 @@ class Layout extends Component{
             sideOn: !this.state.sideOn
         })
     }
+    
     render(){
         return(
             <React.Fragment>

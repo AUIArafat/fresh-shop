@@ -2598,6 +2598,16 @@
 	border: none;
 }
 
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #b0b435;
+}
+
+.dropdown-nav-link{
+    display: block;
+    padding: 6px 25px;
+    color: #6f6f6f;
+}
+
 
 
 
